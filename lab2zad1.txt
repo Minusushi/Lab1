@@ -1,0 +1,35 @@
+using System;
+class Lab2
+{
+    static void Main()
+    {
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+        string str1 = a.ToString();
+        string str2 = b.ToString();
+        char n = ' ';
+        
+        for(int i = 0; i < str1.Length; i++)
+        {
+            for(int j = 0; j < str2.Length; j++)
+        {
+            
+            if (str1[i] == str2[j])
+            {
+
+                n = str1[i];
+                    
+            }
+        }
+        }     
+        for (int i =0; i < str1.Length; i++)
+        {
+            if (str1[i] == n)
+            {
+
+                Console.Write($"{n} ");
+
+            }
+        }
+    }
+}

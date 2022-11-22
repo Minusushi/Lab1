@@ -1,0 +1,21 @@
+using System;
+class Lab2
+{
+    static void Main()
+    {
+        Console.Write("Введите высоту елки: ");
+        int h = int.Parse(Console.ReadLine());
+        string n = "*";
+        int t = h;
+        for (int i = 0; i < h; i++)
+        {
+
+            Console.WriteLine(n.PadLeft(t));
+            t += 1;
+            n += "**";
+
+
+        }
+        Console.ReadLine();
+    }
+}
