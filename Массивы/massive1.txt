@@ -1,0 +1,21 @@
+using System;
+class Lab2
+{
+    static void Main()
+    {
+       
+        string arr = Console.ReadLine();
+
+        for(int i = 0; i < arr.Length; i++)
+        {
+            Console.Write($"{arr[i]}");
+            if (arr[i]==' ')
+            {
+                Console.WriteLine("\n");
+            }
+            
+        }
+
+       
+    }
+}

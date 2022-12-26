@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Озеров_лабы
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] My_marks = Console.ReadLine().Split(',').Select(q => int.Parse(q)).ToArray();
+            int size = My_marks.Length;
+
+            
+                for (int i = 0; i < size; i++)
+                {
+                    if (My_marks[i] == 2)
+                    {
+                        Console.WriteLine("Здравствуй юность в сапогах");
+                    Console.ReadLine();
+                }
+                }
+            for (int i = 0; i < size; i++)
+            {
+                if (My_marks[i] == 3 && My_marks[i] != 2)
+                {
+                    Console.WriteLine("-стипендия");
+                    Console.ReadLine();
+                }
+            }
+            for (int i = 0; i < size; i++)
+            {
+                if (My_marks[i] == 4 || (My_marks[i] == 4 && My_marks[i] == 5))
+                {
+                    Console.WriteLine("Живи пока");
+                    Console.ReadLine();
+                }
+            }
+            for (int i = 0; i < size; i++)
+            {
+                     if (My_marks[i] == 5 && (My_marks[i] != 3 && My_marks[i] != 2 && My_marks[i] != 4))
+                    {
+                        Console.WriteLine("Megahorosh");
+                    Console.ReadLine();
+                }
+                
+            }
+
+            Console.ReadLine();
+
+        }
+    }
+}
