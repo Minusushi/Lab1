@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Озеров_лабы
+{
+    class Watch
+    {
+        public Watch(string Watch_name, string Watch_surname, decimal Watch_price)
+        {
+            wn = Watch_name;
+            ws = Watch_surname;
+            wp = Watch_price;
+        }
+
+        private string wn;
+        private string ws;
+        private decimal wp;
+
+        public void Print()
+        {
+            Console.WriteLine(wn);
+            Console.WriteLine(ws);
+            Console.WriteLine($"{wp}М");
+        }
+    }
+     class Program
+    {
+
+
+         static void Main()
+        {
+            var myWatch = new Watch("Casio", "electronic", 15.99M);
+            myWatch.Print();
+            Console.ReadLine();
+        }
+    }
+
+}
