@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Озеров_лабы
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = int.Parse(Console.ReadLine());
+            
+            List<int> sirakuz = new List<int>();
+            int[] template = new int[100];
+            int result = 0;
+            while (number != 1)
+            {
+                number = number % 2 == 0 ? number /= 2 : 3 * number + 1;
+                template[result] = number;
+                result++;
+            }
+            sirakuz = template.ToList();
+            for (int i = 0; i < sirakuz.Count; i++)
+            {
+                if (sirakuz[i] != 0) Console.Write($"{sirakuz[i]} ");
+            }
+            Console.ReadLine();
+        }
+    }
+}

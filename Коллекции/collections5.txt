@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Озеров_лабы
+{
+    internal class Program
+    {
+
+
+
+
+        static void Main()
+        {
+            var sentence = new Dictionary<int,string>();
+            string[] arr = Console.ReadLine().Split(new Char[] { ' ' });
+            for (int i = 0; i < arr.Length; i++)
+            {
+                
+                sentence.Add(i,arr[i]);
+                
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (sentence[i] == "Казнить,")
+                {
+                    sentence.Remove(i);
+                    sentence.Add(i,"Казнить");
+
+                }
+                if (sentence[i] == "нельзя")
+                {
+                    sentence.Remove(i);
+                    sentence.Add(i, "нельзя,");
+
+                }
+                Console.Write($"{sentence[i]} ");
+            }
+
+            var sentence2 = new Dictionary<int, string>();
+            string[] arr2 = Console.ReadLine().Split(new Char[] { ' ' });
+            for (int i = 0; i < arr.Length; i++)
+            {
+
+                sentence2.Add(i, arr2[i]);
+
+            }
+            Console.WriteLine();
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                if (sentence2[i] == "Отдых,")
+                {
+                    sentence2.Remove(i);
+                    sentence2.Add(i, "Отдых");
+
+                }
+                if (sentence2[i] == "потом")
+                {
+                    sentence2.Remove(i);
+                    sentence2.Add(i, "потом,");
+
+                }
+                Console.Write($"{sentence2[i]} ");
+            }
+            Console.ReadLine();
+        }
+
+    }
+}
