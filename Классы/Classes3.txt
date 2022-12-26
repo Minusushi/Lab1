@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Озеров_лабы
+{
+    internal class Program
+    {
+        class Point
+        {
+            public double X_fly;
+            public double Y_fly;
+            public double Z_fly;
+            public double X_spider;
+            public double Y_spider;
+            public double Z_spider;
+
+            public void po_ploskosti()
+            {
+                double path1 = Math.Sqrt(Math.Pow(X_spider - X_fly, 2) + Math.Pow(Y_spider - Y_fly, 2));
+                Console.WriteLine("Расстояние по плоскости: " + Math.Round(path1, 5));
+            }
+
+            public void po_prymoy()
+            {
+                double path2 = Math.Sqrt(Math.Pow(X_spider - X_fly, 2) + Math.Pow(Y_spider - Y_fly, 2) + Math.Pow(Z_spider - Z_fly, 2));
+                Console.WriteLine("Расстояние между мухой и пауком по прямой линии: " + Math.Round(path2, 5));
+            }
+        }
+
+        
+            public static void Main()
+            {
+                Point coord = new Point();
+
+                Console.Write("Муха x: ");
+            coord.X_fly = double.Parse(Console.ReadLine());
+
+                Console.Write("Муха y: ");
+            coord.Y_fly = double.Parse(Console.ReadLine());
+
+                Console.Write("Муха z: ");
+            coord.Z_fly = double.Parse(Console.ReadLine());
+
+                Console.Write("Паук x: ");
+            coord.X_spider = double.Parse(Console.ReadLine());
+
+                Console.Write("Паук y: ");
+            coord.Y_spider = double.Parse(Console.ReadLine());
+
+                Console.Write("Паук z: ");
+            coord.Z_spider = double.Parse(Console.ReadLine());
+
+                if (coord.Y_fly == 0)
+                {
+                coord.po_ploskosti();
+                coord.po_prymoy();
+                }
+
+                else
+                {
+                    Console.Write("Ой, что-то пошло не так, возможно Вы неправильно ввели данные");
+                }
+            Console.ReadLine();
+            }
+        }
+
+    }
