@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Озеров_лабы
+{
+    internal class Program
+    {
+        static void PrintSum(string symbol, int amount)
+        {
+            string[] Print = new string[amount];
+            for (int i = 0; i < Print.Length; i++)
+            {
+                Print[i] = symbol;
+                Console.Write($"{Print[i]} ");
+                
+            }
+            
+            
+        }
+        static void Main()
+        {
+            Console.WriteLine("Введите символ: ");
+            string symbol = Console.ReadLine();
+            Console.WriteLine("Введите кол-во символов: ");
+            int amount = int.Parse(Console.ReadLine());
+
+            PrintSum(symbol, amount);
+            Console.ReadLine();
+        }
+    }
+}
