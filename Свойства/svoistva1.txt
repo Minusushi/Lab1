@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Озеров_лабы
+{
+    internal class Program
+    {
+        class Tree
+        {
+            private string tree_name;
+            private int numb;
+            public Tree(string t_nme,int t_num )
+            {
+                tree_name = t_nme;
+                numb = t_num;
+            }
+            public void Print()
+            {
+                Console.WriteLine($"Название дерева - {tree_name}");
+                Console.WriteLine($"Кол-во на складе - {numb}");
+                
+            }
+
+
+        }
+        public static void Main()
+            {
+                var tree1 = new Tree("сосна", -6);
+                var tree2 = new Tree("береза", 80);
+                tree1.Print();
+                tree2.Print();
+            Console.ReadLine();
+            }
+        
+    }
+}
